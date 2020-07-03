@@ -889,11 +889,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@brainhubeu/react-carousel@^1.18.5":
-  version "1.18.5"
-  resolved "https://registry.yarnpkg.com/@brainhubeu/react-carousel/-/react-carousel-1.18.5.tgz#4fc8dccdc9183731d6c339bcf4e4225bdd14b9af"
-  integrity sha512-+nC/c5HshdTsuiw229WLXCyY18z5HUaUt5PGQWVWYpll21Mj47xJS/PLNIkewj4ijnhCjflhybd+bxHe79oWew==
-
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.3.tgz#099139eaec7ebf07a27c1786a3ff64f39464d2ef"

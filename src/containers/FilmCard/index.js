@@ -75,7 +75,6 @@ export default function FilmCard({
           <p>
             {description}
           </p>
-          <h4>Director</h4>
         </Styled.OverviewWrapper>
         <Styled.ButtonsWrapper>
           { trailer && <Button background="#c4302b" title="Watch Trailer" icon={faPlay} path={trailer} /> }
