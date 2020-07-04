@@ -216,6 +216,11 @@ export const Refresh = styled.a`
   font-size: 12px;
   color: ${colors.white};
   background-color: ${colors.purpleLighter};
+
+  svg {
+    font-size: 9px;
+    margin-left: 5px;
+  }
 `;
 
 export const BackLink = styled(Link)`

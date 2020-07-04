@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  faClock, faStar, faArrowLeft, faPlay, faMoneyBill
+  faClock, faStar, faArrowLeft, faPlay, faMoneyBill, faRedo
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -77,8 +77,8 @@ export default function FilmCard({
           </p>
         </Styled.OverviewWrapper>
         <Styled.ButtonsWrapper>
+          <Styled.Refresh onClick={refreshPage}> Find Another <FontAwesomeIcon icon={faRedo} /> </Styled.Refresh>
           { trailer && <Button background="#c4302b" title="Watch Trailer" icon={faPlay} path={trailer} /> }
-          <Styled.Refresh onClick={refreshPage}> Find Another </Styled.Refresh>
         </Styled.ButtonsWrapper>
       </Styled.Details>
     </Styled.Wrapper>
