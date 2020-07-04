@@ -1,8 +1,8 @@
 import { SET_GENRE, SET_YEAR } from '~/redux/actions/search';
 
 const INITIAL_VALUE = {
-  genre: 27,
-  year: 2019
+  genre: 28,
+  year: 2020
 };
 
 const SearchReducer = (state = INITIAL_VALUE, action) => {

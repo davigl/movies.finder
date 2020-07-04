@@ -1,19 +1,19 @@
 const genres = [
   {
     id: 28,
-    name: 'Ação'
+    name: 'Action'
   },
   {
     id: 12,
-    name: 'Aventura'
+    name: 'Adventure'
   },
   {
     id: 16,
-    name: 'Animação'
+    name: 'Animation'
   },
   {
     id: 35,
-    name: 'Comédia'
+    name: 'Comedy'
   },
   {
     id: 80,
@@ -25,27 +25,31 @@ const genres = [
   },
   {
     id: 10751,
-    name: 'Família'
+    name: 'Family'
   },
   {
     id: 14,
-    name: 'Fantasia'
+    name: 'Fantasy'
   },
   {
     id: 36,
-    name: 'História'
+    name: 'History'
   },
   {
     id: 27,
-    name: 'Terror'
+    name: 'Horror'
+  },
+  {
+    id: 53,
+    name: 'Thriller'
   },
   {
     id: 10402,
-    name: 'Músical'
+    name: 'Musical'
   },
   {
     id: 9648,
-    name: 'Mistério'
+    name: 'Mistery'
   },
   {
     id: 10749,
@@ -53,19 +57,15 @@ const genres = [
   },
   {
     id: 878,
-    name: 'Ficção científica'
-  },
-  {
-    id: 53,
-    name: 'Thriller'
+    name: 'Science Fiction'
   },
   {
     id: 10752,
-    name: 'Guerra'
+    name: 'War'
   },
   {
     id: 37,
-    name: 'Faroeste'
+    name: 'Western'
   }
 ];
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import LazyLoad from 'react-lazy-load';
 import { useDispatch } from 'react-redux';
 
@@ -11,27 +11,34 @@ import * as Styled from './styles';
 
 export default function Header() {
   const dispatch = useDispatch();
-  const yearsOptions = years.map((year) => <option value={year} key={year}>{year}</option>);
+  const yearRef = useRef(null);
+  const genreRef = useRef(null);
+  const yearsOptions = years().map((year) => <option value={year} key={year}>{year}</option>);
   const genresOptions = genres.map((genre) => <option key={genre.id} value={genre.id}>{genre.name}</option>);
+
+  function updateSearch() {
+    setGenre(dispatch, genreRef.current.value);
+    setYear(dispatch, yearRef.current.value);
+  }
 
   return (
     <Styled.Wrapper>
       <div>
-        <h1>O que vamos assistir hoje?</h1>
-        <p>Cansado de assistir os mesmos filmes e deseja encontrar algo novo? </p>
+        <h1>What are we going to watch today?</h1>
+        <p>Tired of watching the same old movies and want to find something new? </p>
         <Styled.GridOptions>
-          <h6>Gênero</h6>
-          <h6>Ano</h6>
+          <h6>Genre</h6>
+          <h6>Year</h6>
         </Styled.GridOptions>
         <Styled.GridOptions>
-          <Styled.Select onChange={(e) => { setGenre(dispatch, e.target.value); }}>
+          <Styled.Select ref={genreRef}>
             {genresOptions}
           </Styled.Select>
-          <Styled.Select onChange={(e) => { setYear(dispatch, e.target.value); }}>
+          <Styled.Select ref={yearRef}>
             {yearsOptions}
           </Styled.Select>
         </Styled.GridOptions>
-        <Styled.SearchButton path="/random-movie">Buscar</Styled.SearchButton>
+        <Styled.SearchButton onClick={updateSearch} path="/random-movie">Search</Styled.SearchButton>
       </div>
       <LazyLoad height="500" debounce>
         <img src={moviePhoto} alt="People Celebrating Movie" />
