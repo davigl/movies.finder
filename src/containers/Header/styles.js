@@ -73,26 +73,34 @@ export const Wrapper = styled.header`
 
   img {
     height: 500px;
+    margin-left: 15px;
+    margin-top: 15px;
     width: auto;
     animation: ${tiltInBottom} 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     overflow: hidden;
+    display: inherit;
 
     @media (min-width:320px) {
-      height: 200px;
+      display: none;
     }
     @media (min-width:480px) {
-      height: 350px;
+
+      height: 330px;
     }
     @media (min-width:600px) {
-      height: 400px;
+      display: inherit;
+      height: 370px;
     }
     @media (min-width:801px) {
+      display: inherit;
       height: 450px;
     }
     @media (min-width:1025px) {
+      display: inherit;
       height: 500px;
     }
     @media (min-width:1281px) {
+      display: inherit;
       height: 500px;
     }
   }
@@ -101,7 +109,7 @@ export const Wrapper = styled.header`
     width: 85%;
 
     div:first-child {
-      width: 80%;
+      width: 100%;
 
       h1 {
         font-size: 30px;

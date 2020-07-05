@@ -22,4 +22,8 @@ export const Button = styled.a`
     font-size: 9px;
     margin-left: 5px;
   }
+
+  &:hover {
+    filter: brightness(90%);
+  }
 `;

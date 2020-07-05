@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import LazyLoad from 'react-lazy-load';
 import { useDispatch } from 'react-redux';
 
-import moviePhoto from '~/assets/images/movie.png';
+import moviePhoto from '~/assets/images/SVG/movies.svg';
 import genres from '~/mocks/genres';
 import years from '~/mocks/years';
 import { setYear, setGenre } from '~/redux/actions/search';

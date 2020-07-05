@@ -26,16 +26,6 @@ export const Container = styled.main`
   justify-content: space-evenly;
 `;
 
-export const CarouselWrapper = styled.div`
-  width: 80%;
-  padding: 15px;
-  border-radius: 15px;
-
-  @media screen and (max-width: 950px) {
-    width: 85%;
-  }
-`;
-
 export const RightShape = styled.img.attrs(() => ({
   src: Shape
 }))`
@@ -63,7 +53,7 @@ export const BottomShape = styled.img.attrs(() => ({
   src: Bottom
 }))`
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   left: 0;
   z-index: -1;
 
@@ -80,5 +70,6 @@ export const BottomShape = styled.img.attrs(() => ({
     left: 0;
     transform: rotate(0deg);
     width: 270px;
+    bottom: 0px;
   }
 `;
