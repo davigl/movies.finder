@@ -8,7 +8,6 @@ import { getDominantColor } from '~/utils/colors';
 
 import * as Styled from './styles';
 
-
 export default function ShowMovie() {
   const options = useSelector((state) => state.search);
   const [movie, setMovie] = useState({});

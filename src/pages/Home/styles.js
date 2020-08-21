@@ -41,11 +41,11 @@ export const RightShape = styled.img.attrs(() => ({
   }
 
   @media (min-width: 768px) {
-    width: 500px;
+    width: 400px;
   }
 
   @media (min-width: 1000px) {
-    width: auto;
+    width: 550px;
   }
 `;
 
@@ -53,8 +53,8 @@ export const BottomShape = styled.img.attrs(() => ({
   src: Bottom
 }))`
   position: absolute;
-  bottom: 8px;
-  left: 0;
+  bottom: 0;
+  left: -8px;
   z-index: -1;
 
   height: auto;

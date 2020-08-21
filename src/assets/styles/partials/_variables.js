@@ -11,7 +11,9 @@ export const colors = {
   grayLighter: '#DCDCDC',
   purpleDarker: '#4545e5',
   purpleLighter: '#7B59FF',
+  purpleDark: '#2b2b7a',
   cyanDark: '#081C22',
   green: '#689689',
+  greenDarker: '#3b574f',
   yellow: '#e3e655'
 };

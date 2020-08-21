@@ -12,8 +12,8 @@ export default function Home() {
         { Logo && <img src={Logo} alt="Logo Movie Finder" /> }
       </Styled.Nav>
       <Header />
-      <Styled.RightShape />
-      <Styled.BottomShape />
+      <Styled.RightShape alt="A Circle at the Right Top" />
+      <Styled.BottomShape alt="A Circle at the Right Bottom" />
     </Styled.Container>
   );
 }

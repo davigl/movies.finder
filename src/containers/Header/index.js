@@ -40,8 +40,8 @@ export default function Header() {
         </Styled.GridOptions>
         <Styled.SearchButton onClick={updateSearch} path="/random-movie">Search</Styled.SearchButton>
       </div>
-      <LazyLoad height="500" debounce>
-        <img src={moviePhoto} alt="People Celebrating Movie" />
+      <LazyLoad height="400" debounce>
+        <img src={moviePhoto} alt="People Watching Tv" />
       </LazyLoad>
     </Styled.Wrapper>
   );

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { Circle } from 'rc-progress';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { tiltInRight, tiltInLeft } from '~/assets/styles/partials/_animations';
 import { colors } from '~/assets/styles/partials/_variables';
@@ -23,7 +23,7 @@ export const Wrapper = styled.article`
   }
 `;
 
-export const WrapperCard = styled.div`
+export const WrapperCard = styled.section`
   align-self: ${(props) => (props.align ? props.align : 'flex-start')};
 
   width: 300px;
@@ -39,24 +39,34 @@ export const WrapperCard = styled.div`
   animation: ${tiltInLeft} 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 `;
 
-
-export const Details = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-
-  padding-left: 30px;
-  transition: transform 2s;
+export const LinksWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 48px 67px;
+  grid-gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
   a {
-    margin-left: 10px;
-    width: 48px;
-
     img {
       height: 25px;
       width: auto;
     }
   }
+
+  @media screen and (max-width: 950px) {
+    justify-content: center;
+  }
+`;
+
+
+export const Details = styled.section`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+
+  padding-left: 30px;
+  transition: transform 2s;
 
   h1 {
     font-family: 'Ubuntu';
@@ -99,6 +109,7 @@ export const Details = styled.div`
   }
 
   @media screen and (max-width: 950px) {
+    min-width: 300px;
     padding-left: 0;
     padding-top: 15px;
     flex: 1;
@@ -108,7 +119,6 @@ export const Details = styled.div`
 export const TagsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: inherit;
   margin-bottom: 10px;
 
   @media screen and (max-width: 950px) {
@@ -121,9 +131,9 @@ export const OverviewWrapper = styled.div`
   justify-content: space-around;
   flex-direction: column;
   background-color: rgba(8, 8, 26, .9);
-  min-height: 150px;
+  min-height: 260px;
   border-radius: 8px;
-  padding: 50px 25px 50px 25px;
+  padding: 80px 25px 50px 25px;
   animation: ${tiltInRight} 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
   span {
@@ -185,7 +195,7 @@ export const Group = styled.div`
 
   box-sizing: border-box;
 
-  background-color: ${colors.green};
+  background-color: ${colors.purpleDark};
   border-radius: 8px;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -209,13 +219,12 @@ export const Refresh = styled.a`
   max-width: 100px;
   padding: 15px 20px 15px 20px;
   border-radius: 20px;
-  margin-left: 15px;
   cursor: pointer;
 
   text-align: center;
   font-size: 12px;
   color: ${colors.white};
-  background-color: ${colors.purpleLighter};
+  background-color: ${colors.purpleDark};
 
   svg {
     font-size: 9px;
@@ -233,4 +242,63 @@ export const BackLink = styled(Link)`
   position: relative;
   font-size: 1.5rem;
   color: ${colors.white};
+`;
+
+export const BackgroundTabs = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  background-color: ${colors.purpleDarker};
+  width: 100%;
+`;
+
+export const TabsWrapper = styled.div`
+  position: relative;
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+
+  @media screen and (max-width: 950px) {
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+`;
+
+export const ButtonTab = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  ${(p) => (p.isActive
+    ? css`
+      background-color: ${colors.purpleLighter}
+    `
+    : css`
+      background-color: ${colors.purpleDark};
+    `
+  )};
+
+  height: 60px;
+  width: 100%;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  > span {
+    ${(p) => (p.isActive
+    ? css`
+          color: ${colors.white};
+          font-weight: bold;
+        `
+    : css`
+          color: ${colors.white};
+          font-weight: inherit;
+        `
+  )};
+  }
+
+  > svg {
+    color: ${(p) => (p.isActive ? colors.green : colors.greenDarker)};
+  }
 `;

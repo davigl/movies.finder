@@ -72,9 +72,8 @@ export const Wrapper = styled.header`
   }
 
   img {
-    height: 500px;
-    margin-left: 15px;
-    margin-top: 15px;
+    margin-left: 35px;
+    margin-top: 35px;
     width: auto;
     animation: ${tiltInBottom} 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     overflow: hidden;
@@ -83,25 +82,29 @@ export const Wrapper = styled.header`
     @media (min-width:320px) {
       display: none;
     }
-    @media (min-width:480px) {
 
+    @media (min-width:480px) {
       height: 330px;
     }
+
     @media (min-width:600px) {
       display: inherit;
       height: 370px;
     }
+
     @media (min-width:801px) {
       display: inherit;
       height: 450px;
     }
+
     @media (min-width:1025px) {
       display: inherit;
-      height: 500px;
+      height: 400px;
     }
+
     @media (min-width:1281px) {
       display: inherit;
-      height: 500px;
+      height: 400px;
     }
   }
 
@@ -151,7 +154,7 @@ export const Select = styled.select`
 export const GridOptions = styled.div`
   align-self: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 2fr);
   width: 100%;
   grid-gap: 15px;
 

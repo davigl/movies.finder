@@ -1,20 +1,20 @@
 import React from 'react';
 import {
-  HashRouter, Route, Switch
+  BrowserRouter, Switch as Routes, Route
 } from 'react-router-dom';
 
 import Home from '~/pages/Home';
 import NotFound from '~/pages/NotFound';
 import ShowMovie from '~/pages/ShowMovie';
 
-const Routes = () => (
-  <HashRouter>
-    <Switch>
+const ProjectRoutes = () => (
+  <BrowserRouter>
+    <Routes>
       <Route exact path="/" component={Home} />
       <Route exact path="/random-movie" component={ShowMovie} />
       <Route path="*" component={NotFound} />
-    </Switch>
-  </HashRouter>
+    </Routes>
+  </BrowserRouter>
 );
 
-export default Routes;
+export default ProjectRoutes;
