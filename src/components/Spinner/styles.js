@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import SpinnerImage from '~/assets/images/spinner.png';
+import SpinnerImage from '~/assets/images/spinner-2.png';
 import { pulse } from '~/assets/styles/partials/_animations';
 
 const SpinnerWrapper = styled.div`
@@ -9,9 +9,8 @@ const SpinnerWrapper = styled.div`
   height: 80px;
 
   top: 50%;
-  left: 50%;
-
-  transform: scale(1);
+  right: 50%;
+  transform: translate(50%, -50%);
 `;
 
 const Spinner = styled.img.attrs(() => ({

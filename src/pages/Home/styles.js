@@ -5,14 +5,15 @@ import Shape from '~/assets/images/SVG/bregueco.svg';
 
 export const Nav = styled.nav`
   min-width: 1120px;
+  padding: 15px;
 
+  position: fixed;
   text-align: center;
   top: 0;
 
   img {
     height: 80px;
     width: auto;
-    transform: translateY(-10px);
   }
 `;
 
