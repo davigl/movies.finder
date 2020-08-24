@@ -12,13 +12,13 @@ export const SearchButton = styled(Link).attrs((p) => ({
   align-items: center;
   justify-content: center;
 
-  width: 260px;
+  width: 240px;
   height: 56px;
   border: 0;
   border-radius: 30px;
   margin-top: 26px;
 
-  background-color: ${colors.purpleDarker};
+  background-color: ${colors.purpleLighter};
   color: ${colors.white};
   font-weight: bold;
   font-size: 16px;
@@ -27,7 +27,7 @@ export const SearchButton = styled(Link).attrs((p) => ({
   cursor: pointer;
 
   &:hover {
-    background-color: ${colors.purpleLighter};
+    background-color: ${colors.purpleDarker};
   }
 
   @media screen and (max-width: 950px) {
@@ -43,7 +43,6 @@ export const Wrapper = styled.header`
   overflow-y: hidden;
 
   padding: 15px;
-  margin-top: 60px;
   border-radius: 15px;
 
   text-align: left;
@@ -124,7 +123,6 @@ export const Wrapper = styled.header`
     }
   }
 `;
-
 
 export const Select = styled.select`
   height: 50px;

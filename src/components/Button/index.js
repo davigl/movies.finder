@@ -1,11 +1,9 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import * as Styled from './styles';
 
 export default function Button({
-  path, title, background, refresh, icon
+  path, title, background, refresh, children
 }) {
   return (
     <Styled.Button
@@ -14,7 +12,8 @@ export default function Button({
       target="_blank"
       onClick={refresh}
       rel="noopener noreferrer"
-    > {title} <FontAwesomeIcon icon={icon} />
+    > {title}
+      {children}
     </Styled.Button>
   );
 }

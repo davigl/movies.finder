@@ -23,6 +23,27 @@ export const Wrapper = styled.article`
   }
 `;
 
+export const FilmTitle = styled.h1`
+  font-family: 'Ubuntu';
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: ${colors.white};
+
+  @media screen and (max-width: 950px) {
+    text-align: center;
+  }
+`;
+
+export const FilmYear = styled.span`
+  font-size: 2rem;
+  font-weight: normal;
+  color: ${colors.grayLight};
+
+  @media screen and (max-width: 950px) {
+    text-align: center;
+  }
+`;
+
 export const WrapperCard = styled.section`
   align-self: ${(props) => (props.align ? props.align : 'flex-start')};
 
@@ -57,7 +78,6 @@ export const LinksWrapper = styled.div`
     justify-content: center;
   }
 `;
-
 
 export const Details = styled.section`
   flex: 1;

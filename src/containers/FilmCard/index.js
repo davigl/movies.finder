@@ -1,18 +1,17 @@
 import React from 'react';
+import { FaInfoCircle, FaComment } from 'react-icons/fa';
 
 import { Tabs, Tab, Panel } from '@bumaga/tabs';
+
+import FilmActions from '~/containers/FilmActions';
+import FilmCover from '~/containers/FilmCover';
+import FilmDetails from '~/containers/FilmDetails';
+import FilmLinks from '~/containers/FilmLinks';
+import FilmTabs from '~/containers/FilmTabs';
+
 import {
-  faClock, faStar, faArrowLeft, faPlay, faMoneyBill, faRedo, faInfoCircle,
-  faComment
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import LogoImdb from '~/assets/images/logo-imdb.png';
-import LogoParentsGuide from '~/assets/images/parents-guide-3.png';
-import Button from '~/components/Button';
-import Tag from '~/components/Tag';
-
-import * as Styled from './styles';
+  Wrapper, Details, OverviewWrapper, FilmTitle, FilmYear
+} from './styles';
 
 export default function FilmCard({
   title, year, description, align, thumbnail, genres, trailer, timer, hex,
@@ -25,111 +24,33 @@ export default function FilmCard({
   }
 
   return (
-    <Styled.Wrapper>
-      <Styled.WrapperCard align={align} background={thumbnail}>
-        <Styled.BackLink to="/">
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </Styled.BackLink>
-      </Styled.WrapperCard>
-      <Styled.Details>
-        <h1>{title}
-          <span> ({year})</span>
-        </h1>
-        <Styled.LinksWrapper>
-          {imdbPath
-            && (
-              <>
-                <a
-                  href={imdbPath}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={LogoImdb} alt="An imdb logo" />
-                </a>
-                <a
-                  href={`${imdbPath}/parentalguide`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={LogoParentsGuide} alt="An imdb logo for parents guide" />
-                </a>
-              </>
-            )}
-        </Styled.LinksWrapper>
+    <Wrapper>
+      <FilmCover thumbnail={thumbnail} align={align} />
+      <Details>
+        <FilmTitle>{title}
+          <FilmYear> ({year})</FilmYear>
+        </FilmTitle>
+        <FilmLinks imdbPath={imdbPath} />
         <Tabs>
-          <Styled.OverviewWrapper hex={hex}>
-            <Styled.BackgroundTabs>
-              <Styled.TabsWrapper>
-                <Tab>
-                  <Styled.ButtonTab isActive>
-                    <FontAwesomeIcon icon={faInfoCircle} />
-                    <span>Details</span>
-                  </Styled.ButtonTab>
-                </Tab>
-                <Tab>
-                  <Styled.ButtonTab isActive>
-                    <FontAwesomeIcon icon={faInfoCircle} />
-                    <span>Details</span>
-                  </Styled.ButtonTab>
-                </Tab>
-                <Tab>
-                  <Styled.ButtonTab isActive>
-                    <FontAwesomeIcon icon={faComment} />
-                    <span>Reviews</span>
-                  </Styled.ButtonTab>
-                </Tab>
-              </Styled.TabsWrapper>
-            </Styled.BackgroundTabs>
+          <OverviewWrapper hex={hex}>
+            <FilmTabs />
             <Panel>
-              <h3>Tags</h3>
-              <Styled.TagsContainer>
-                {genres && genres.map((genre) => (
-                  <Tag key={genre.id}>{genre.name}</Tag>
-                ))}
-              </Styled.TagsContainer>
-              <h3>Overview</h3>
-              <Styled.OverviewDetailsWrapper>
-                <Styled.Group>
-                  <span> Popularity <FontAwesomeIcon icon={faStar} /></span>
-                  <Styled.AverageWrapper>
-                    <Styled.Average
-                      percent={voteAverage}
-                      strokeWidth="11"
-                      trailWidth="9"
-                      trailColor="#204529"
-                      strokeColor={color}
-                    />
-                    <span>{voteAverage}%</span>
-                  </Styled.AverageWrapper>
-                </Styled.Group>
-                <Styled.Group>
-                  <span>Duration<FontAwesomeIcon icon={faClock} /></span>
-                  <p>{timer}</p>
-                </Styled.Group>
-
-                {budget > 0
-            && (
-            <Styled.Group>
-              <span>Budget<FontAwesomeIcon icon={faMoneyBill} /></span>
-              <p>$ {budget}</p>
-            </Styled.Group>
-            )}
-              </Styled.OverviewDetailsWrapper>
-              <h3>Resume</h3>
-              <p>
-                {description}
-              </p>
+              <FilmDetails
+                budget={budget}
+                genres={genres}
+                voteAverage={voteAverage}
+                color={color}
+                timer={timer}
+                description={description}
+              />
             </Panel>
             <Panel>
               a
             </Panel>
-          </Styled.OverviewWrapper>
+          </OverviewWrapper>
         </Tabs>
-        <Styled.ButtonsWrapper>
-          <Styled.Refresh onClick={refreshPage}> Find Another <FontAwesomeIcon icon={faRedo} /> </Styled.Refresh>
-          { trailer && <Button background="#c4302b" title="Watch Trailer" icon={faPlay} path={trailer} /> }
-        </Styled.ButtonsWrapper>
-      </Styled.Details>
-    </Styled.Wrapper>
+        <FilmActions trailer={trailer} refreshPage={refreshPage} />
+      </Details>
+    </Wrapper>
   );
 }

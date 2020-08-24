@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Logo from '~/assets/images/logo.png';
+import Logo from '~/assets/images/logo.svg';
 import Header from '~/containers/Header';
 
 import * as Styled from './styles';

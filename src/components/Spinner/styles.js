@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import SpinnerImage from '~/assets/images/spinner.png';
-import { loadingEffect } from '~/assets/styles/partials/_animations';
+import { pulse } from '~/assets/styles/partials/_animations';
 
 const SpinnerWrapper = styled.div`
   position: absolute;
@@ -11,7 +11,7 @@ const SpinnerWrapper = styled.div`
   top: 50%;
   left: 50%;
 
-  transform: translate(-50%, -50%);
+  transform: scale(1);
 `;
 
 const Spinner = styled.img.attrs(() => ({
@@ -19,7 +19,7 @@ const Spinner = styled.img.attrs(() => ({
 }))`
   height: 100%;
   width: auto;
-  animation: ${loadingEffect} 1.2s linear infinite;
+  animation: ${pulse} 1.2s linear infinite;
 `;
 
 export { SpinnerWrapper, Spinner };
