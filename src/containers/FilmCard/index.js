@@ -1,7 +1,6 @@
 import React from 'react';
-import { FaInfoCircle, FaComment } from 'react-icons/fa';
 
-import { Tabs, Tab, Panel } from '@bumaga/tabs';
+import { Tabs, Panel } from '@bumaga/tabs';
 
 import FilmActions from '~/containers/FilmActions';
 import FilmCover from '~/containers/FilmCover';
