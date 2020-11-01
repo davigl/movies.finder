@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import Bottom from '~/assets/images/SVG/bottom.svg';
 import Shape from '~/assets/images/SVG/bregueco.svg';
+import { fadeIn } from '~/assets/styles/partials/_animations';
 
 export const Nav = styled.nav`
   min-width: 1120px;
@@ -18,6 +19,7 @@ export const Nav = styled.nav`
 `;
 
 export const Container = styled.main`
+  position: relative;
   min-height: 100vh;
 
   display: flex;
@@ -33,6 +35,7 @@ export const RightShape = styled.img.attrs(() => ({
   right: 0;
   top: 0;
   z-index: -1;
+  animation: ${fadeIn} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s  both;
 
   height: auto;
 
@@ -56,6 +59,7 @@ export const BottomShape = styled.img.attrs(() => ({
   bottom: 0;
   left: -8px;
   z-index: -1;
+  animation: ${fadeIn} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s  both;
 
   height: auto;
 

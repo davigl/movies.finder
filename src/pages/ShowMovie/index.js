@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import Spinner from '~/components/Spinner';
+import Donation from '~/containers/Donation';
 import FilmCard from '~/containers/FilmCard';
 import { getMovieApi } from '~/services/movies-api';
 import { getDominantColor } from '~/utils/colors';
@@ -57,6 +58,7 @@ export default function ShowMovie() {
           budget={movie.budget}
           imdbPath={movie.imdbPath}
         />
+        <Donation />
       </Styled.Wrapper>
       )}
     </>

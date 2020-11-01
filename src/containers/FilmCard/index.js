@@ -46,6 +46,9 @@ export default function FilmCard({
             <Panel>
               a
             </Panel>
+            <Panel>
+              a
+            </Panel>
           </OverviewWrapper>
         </Tabs>
         <FilmActions trailer={trailer} refreshPage={refreshPage} />

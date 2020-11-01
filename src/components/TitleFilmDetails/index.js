@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { colors } from '~/assets/styles/partials/_variables';
 
-const TitleFilmDetails = styled.h3`
+const TitleFilmDetails = styled.p`
   margin-bottom: 15px;
 
   color: ${colors.white};

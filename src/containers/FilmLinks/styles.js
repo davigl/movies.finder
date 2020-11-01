@@ -22,18 +22,16 @@ export const LinksWrapper = styled.div`
 
 export const LogoImdb = styled.img.attrs(() => ({
   src: ImdbLogo,
-  alt: 'An imdb logo'
+  alt: 'An imdb logo',
 }))`
   ${_icon};
 `;
 
 export const LogoParents = styled.img.attrs(() => ({
   src: ParentsGuideLogo,
-  alt: 'An imdb logo for parents guide'
+  alt: 'An imdb logo for parents guide',
 }))`
   ${_icon};
 `;
 
-export const Link = styled.a`
-
-`;
+export const Link = styled.a``;

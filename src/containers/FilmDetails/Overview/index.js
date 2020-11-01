@@ -31,11 +31,11 @@ export default function Overview({
           <span>Duration <FaClock /></span>
           <p>{timer}</p>
         </Group>
-        {budget > 0
+        {budget && budget.length > 5
         && (
         <Group>
           <span>Budget <FaMoneyBill /></span>
-          <p>$ {budget}</p>
+          <p>{budget}</p>
         </Group>
         )}
       </OverviewDetailsWrapper>

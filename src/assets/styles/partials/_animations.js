@@ -18,6 +18,15 @@ export const fadeIn = keyframes`
   }
 `;
 
+export const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
+
 export const slideIn = keyframes`
   0% {
     transform: translateZ(600px);
@@ -61,16 +70,47 @@ export const tiltInBottom = keyframes`
 `;
 
 export const pulse = keyframes`
-  0% {
-    transform: scale(0.7);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-  }
-  70% {
+  from {
     transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+`;
+
+export const textPopUpTop = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
   100% {
-    transform: scale(0.7);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    opacity: 1;
+    transform: translateY(0px);
+  }
+`;
+
+export const textPopTopDown = keyframes`
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px);
   }
 `;

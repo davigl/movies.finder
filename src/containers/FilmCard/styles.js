@@ -15,11 +15,15 @@ export const Wrapper = styled.article`
   min-height: 570px;
   max-width: 1000px;
 
+  z-index: 1;
+
   padding-top: 15px;
   padding-bottom: 15px;
 
   @media screen and (max-width: 950px) {
     max-width: 300px;
+
+    margin-top: 20px;
   }
 `;
 

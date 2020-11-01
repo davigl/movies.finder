@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-import { tiltInBottom } from '~/assets/styles/partials/_animations';
+import { tiltInBottom, textPopUpTop, fadeIn } from '~/assets/styles/partials/_animations';
 import { colors } from '~/assets/styles/partials/_variables';
 
 export const SearchButton = styled(Link).attrs((p) => ({
@@ -23,7 +23,9 @@ export const SearchButton = styled(Link).attrs((p) => ({
   font-weight: bold;
   font-size: 16px;
 
-  transition: background-color 0.2s;
+  animation: ${fadeIn} .3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.3s both;
+
+  transition: background-color .2s;
   cursor: pointer;
 
   &:hover {
@@ -59,6 +61,8 @@ export const Wrapper = styled.header`
       color: ${colors.white};
       font-size: 54px;
       font-weight: bold;
+
+      animation: ${textPopUpTop} .3s cubic-bezier(0.250, 0.460, 0.450, 0.940) .3s both;
     }
 
     p  {
@@ -67,6 +71,8 @@ export const Wrapper = styled.header`
       font-weight: 300;
       line-height: 30px;
       margin-top: 24px;
+
+     animation: ${textPopUpTop} .3s cubic-bezier(0.250, 0.460, 0.450, 0.940) .8s both;
     }
   }
 
@@ -74,7 +80,7 @@ export const Wrapper = styled.header`
     margin-left: 35px;
     margin-top: 35px;
     width: auto;
-    animation: ${tiltInBottom} 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: ${tiltInBottom} .4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
     overflow: hidden;
     display: inherit;
 
@@ -140,7 +146,7 @@ export const Select = styled.select`
   color: white;
   padding: 16px 24px;
   appearance: none;
-  transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+  transition: color .3s ease, background-color .3s ease, border-bottom-color .3s ease;
 
   &:hover, &:focus {
     color: ${colors.purpleDarker};
@@ -155,6 +161,8 @@ export const GridOptions = styled.div`
   grid-template-columns: repeat(2, 2fr);
   width: 100%;
   grid-gap: 15px;
+
+  animation: ${fadeIn} .2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.3s both;
 
   h6 {
     margin-top: 23px;

@@ -4,6 +4,7 @@ import { fadeIn } from '~/assets/styles/partials/_animations';
 import { colors } from '~/assets/styles/partials/_variables';
 
 const Wrapper = styled.main`
+  position: relative;
   display: flex;
 
   align-items: center;
@@ -20,7 +21,6 @@ const Wrapper = styled.main`
   animation: ${fadeIn} 2s ease-in;
 
   @media screen and (max-width: 950px) {
-    padding-top: 20px;
     background-size: cover;
   }
 `;
