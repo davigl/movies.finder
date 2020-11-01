@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { GiHearts } from 'react-icons/gi';
 
-import ShareButton from '~/components/ShareButton';
-
 import {
   FloatButton, DonationWrapper, DonationTitle,
   Divisor, Group, Donation, DonationValue, DonationButton,

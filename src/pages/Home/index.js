@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Logo from '~/assets/images/logo.svg';
-import Donation from '~/containers/Donation';
 import Header from '~/containers/Header';
 
 import * as Styled from './styles';
