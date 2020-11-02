@@ -5,38 +5,6 @@ import styled from 'styled-components';
 import { tiltInBottom, textPopUpTop, fadeIn } from '~/assets/styles/partials/_animations';
 import { colors } from '~/assets/styles/partials/_variables';
 
-export const SearchButton = styled(Link).attrs((p) => ({
-  to: p.path
-}))`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 240px;
-  height: 56px;
-  border: 0;
-  border-radius: 30px;
-  margin-top: 26px;
-
-  background-color: ${colors.purpleLighter};
-  color: ${colors.white};
-  font-weight: bold;
-  font-size: 16px;
-
-  animation: ${fadeIn} .3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.3s both;
-
-  transition: background-color .2s;
-  cursor: pointer;
-
-  &:hover {
-    background-color: ${colors.purpleDarker};
-  }
-
-  @media screen and (max-width: 950px) {
-    align-self: center;
-  }
-`;
-
 export const Wrapper = styled.header`
   display: flex;
   align-items: center;
@@ -73,43 +41,6 @@ export const Wrapper = styled.header`
       margin-top: 24px;
 
      animation: ${textPopUpTop} .3s cubic-bezier(0.250, 0.460, 0.450, 0.940) .8s both;
-    }
-  }
-
-  img {
-    margin-left: 35px;
-    margin-top: 35px;
-    width: auto;
-    animation: ${tiltInBottom} .4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
-    overflow: hidden;
-    display: inherit;
-
-    @media (min-width:320px) {
-      display: none;
-    }
-
-    @media (min-width:480px) {
-      height: 330px;
-    }
-
-    @media (min-width:600px) {
-      display: inherit;
-      height: 370px;
-    }
-
-    @media (min-width:801px) {
-      display: inherit;
-      height: 450px;
-    }
-
-    @media (min-width:1025px) {
-      display: inherit;
-      height: 400px;
-    }
-
-    @media (min-width:1281px) {
-      display: inherit;
-      height: 400px;
     }
   }
 
@@ -166,5 +97,67 @@ export const GridOptions = styled.div`
 
   h6 {
     margin-top: 23px;
+  }
+`;
+
+export const AnimationWrapper = styled.div`
+  margin-left: 35px;
+  margin-top: 35px;
+  width: auto;
+  animation: ${tiltInBottom} .4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+  overflow: hidden;
+  display: inherit;
+
+  @media (min-width:320px) {
+    display: none;
+  }
+
+  @media (min-width:480px) {
+    height: 330px;
+  }
+
+  @media (min-width:600px) {
+    display: none;
+  }
+
+  @media (min-width:1025px) {
+    display: none;
+  }
+
+  @media (min-width:1281px) {
+    display: inherit;
+    height: 400px;
+  }
+`;
+
+export const SearchButton = styled(Link).attrs((p) => ({
+  to: p.path
+}))`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 240px;
+  height: 56px;
+  border: 0;
+  border-radius: 30px;
+  margin-top: 26px;
+
+  background-color: ${colors.purpleLighter};
+  color: ${colors.white};
+  font-weight: bold;
+  font-size: 16px;
+
+  animation: ${fadeIn} .3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.3s both;
+
+  transition: background-color .2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${colors.purpleDarker};
+  }
+
+  @media screen and (max-width: 950px) {
+    align-self: center;
   }
 `;

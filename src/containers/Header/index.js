@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import LazyLoad from 'react-lazy-load';
+import Lottie from 'react-lottie';
 import { useDispatch } from 'react-redux';
 
-import moviePhoto from '~/assets/images/SVG/movies.svg';
+import animationData from '~/assets/images/animation.json';
 import genres from '~/mocks/genres';
 import years from '~/mocks/years';
 import { setYear, setGenre } from '~/redux/actions/search';
@@ -14,7 +14,15 @@ export default function Header() {
   const yearRef = useRef(null);
   const genreRef = useRef(null);
   const yearsOptions = years().map((year) => <option value={year} key={year}>{year}</option>);
-  const genresOptions = genres.map((genre) => <option key={genre.id} value={genre.id}>{genre.name}</option>);
+  const genresOptions = genres.map((genre) => (<option key={genre.id} value={genre.id}>{genre.name}</option>));
+  const optionsAnimation = {
+    loop: true,
+    autoplay: true,
+    animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
 
   function updateSearch() {
     setGenre(dispatch, genreRef.current.value);
@@ -40,9 +48,13 @@ export default function Header() {
         </Styled.GridOptions>
         <Styled.SearchButton onClick={updateSearch} path="/random-movie">Search</Styled.SearchButton>
       </div>
-      <LazyLoad height="400" debounce>
-        <img src={moviePhoto} alt="People Watching Tv" />
-      </LazyLoad>
+      <Styled.AnimationWrapper>
+        <Lottie
+          options={optionsAnimation}
+          isStopped={false}
+          isPaused={false}
+        />
+      </Styled.AnimationWrapper>
     </Styled.Wrapper>
   );
 }
