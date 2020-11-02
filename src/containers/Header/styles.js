@@ -95,7 +95,8 @@ export const GridOptions = styled.div`
 
   animation: ${fadeIn} .2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.3s both;
 
-  h6 {
+  p {
+    color: ${colors.white} !important;
     margin-top: 23px;
   }
 `;

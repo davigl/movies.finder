@@ -35,8 +35,8 @@ export default function Header() {
         <h1>What are we going to watch today?</h1>
         <p>Tired of watching the same old movies and want to find something new? </p>
         <Styled.GridOptions>
-          <h6>Genre</h6>
-          <h6>Year</h6>
+          <p>Genre</p>
+          <p>Year</p>
         </Styled.GridOptions>
         <Styled.GridOptions>
           <Styled.Select ref={genreRef}>
