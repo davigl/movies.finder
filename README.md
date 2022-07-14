@@ -37,7 +37,7 @@ Good movies are hard to find. You never know who's review you can trust. Generat
 
 ## 👀 Preview
 
-![](https://i.imgur.com/b1Z6Vp5.gif)
+![](https://i.imgur.com/l5dVm1a.gif)
 
 ## :rocket: Technologies
 
