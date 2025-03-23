@@ -3,7 +3,7 @@ import axios from 'axios';
 import { threatData } from '~/utils/data';
 
 const api = axios.create({
-  baseURL: 'https://randamovie.herokuapp.com'
+  baseURL: 'https://api.randomovies.com'
 });
 
 const getMovieApi = async (data, setLoading, setMovie) => {
