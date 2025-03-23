@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInfoCircle, FaComment } from 'react-icons/fa';
+import { FaInfoCircle } from 'react-icons/fa';
 
 import { Tab } from '@bumaga/tabs';
 
@@ -13,18 +13,6 @@ export default function FilmTabs() {
           <ButtonTab isActive>
             <FaInfoCircle />
             <span>Details</span>
-          </ButtonTab>
-        </Tab>
-        <Tab>
-          <ButtonTab isActive>
-            <FaInfoCircle />
-            <span>Details</span>
-          </ButtonTab>
-        </Tab>
-        <Tab>
-          <ButtonTab isActive>
-            <FaComment />
-            <span>Reviews</span>
           </ButtonTab>
         </Tab>
       </TabsWrapper>
